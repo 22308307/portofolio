@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mbuyi Jonathan - Portfolio programmer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 2rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+            border-radius: 20px;
+            margin-top: 2rem;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+            font-weight: bold;
+        }
+
+        h1 {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.2rem;
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.95);
+            margin: 2rem 0;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .section h2 {
+            color: #4a5568;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .skill-category {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            padding: 1rem;
+            border-radius: 10px;
+            color: white;
+            text-align: center;
+        }
+
+        .skill-category h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+
+        .project-card {
+            background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
+            padding: 1.5rem;
+            border-radius: 15px;
+            color: #2d3748;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-card h3 {
+            margin-bottom: 0.5rem;
+            color: #2d3748;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+
+        .tag {
+            background: rgba(255, 255, 255, 0.3);
+            padding: 0.25rem 0.5rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            backdrop-filter: blur(5px);
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .education-item, .experience-item {
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            border-radius: 10px;
+        }
+
+        .date {
+            color: #666;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            margin-top: 1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="profile-img">MJ</div>
+            <h1>Mbuyi Jonathan</h1>
+            <p class="subtitle">Computer Programming Student • Passionate Developer</p>
+        </header>
+
+        <section class="section">
+            <h2>About</h2>
+            <p>Motivated second-year Computer Programming student at cyprus international university. Passionate about web development and learning new technologies. Although I have no professional experience yet, I have developed several personal projects that demonstrate my ability to learn quickly and solve complex problems. I am actively seeking internship opportunities to put my skills into practice.</p>
+        </section>
+
+        <section class="section">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Languages</h3>
+                    <p>Python, JavaScript, HTML/CSS</p>
+                </div>
+               
+                <div class="skill-category">
+                    <h3>Tools and Databases</h3>
+                    <p>Git/GitHub, MySQL, SQLite</p>
+                </div>
+                <div class="skill-category">
+                    <h3>In Learning</h3>
+                    <p>Docker, MongoDB, Spring Boot, Machine Learning</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Personal and Academic Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>🏪 Cyprus E-Shop - E-commerce Website</h3>
+                    <p>Final semester project: creation of an e-commerce website to promote local Cypriot products. Multilingual interface (Greek, Turkish, English) with shopping cart system and order management.</p>
+                    <div class="tech-tags">
+                        <span class="tag">HTML/CSS</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">Python</span>
+                    </div>
+                    <a href="https://github.com/22308307/my-website-demonstration.git" class="btn">See code</a>
+                </div>
+                
+                <div class="project-card">
+                    <h3>📚 StudyBuddy - Study App</h3>
+                    <p>Application web pour aider les étudiants à organiser leurs révisions. Système de flashcards, planificateur d'études et suivi des progrès. Développée durant mes cours de programmation.</p>
+                    <div class="tech-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">SQLite</span>
+                        <span class="tag">Bootstrap</span>
+                    </div>
+                    <a href="https://my-website-demonstration.onrender.com" class="btn">Demonstration</a>
+                </div>
+                
+                
+                <div class="project-card">
+                    <h3>🌐 Personal Website Portfolio</h3>
+                    <p>First personal web project: creating this responsive portfolio to showcase my skills and projects. Modern design with CSS and JavaScript animations.</p>
+                    <div class="tech-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                    <a href="#" class="btn">Code source</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Training</h2>
+            <div class="education-item">
+                <h3>Bachelor's Degree in Computer Science</h3>
+                <p><strong>University of Cyprus</strong></p>
+                <p class="date">2023 - 2026 (in progress)</p>
+                <p>Specialization in Software Development and Information Systems</p>
+                <p><strong>Average:</strong> 7.8/10</p>
+                <p><strong>Relevant courses:</strong> Object-Oriented Programming, Data Structures, Databases, Web Development</p>
+            </div>
+            
+            <div class="education-item">
+                <h3>Diploma Apolytiríou (Congolese Baccalaureate)</h3>
+                <p><strong>Tusiki High Schooll</strong></p>
+                <p class="date">2019 - 2022</p>
+                <p>Specialization in Electricity</p>
+                <p><strong>Grade: </strong> Very Good</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Activities & Learning</h2>
+            
+            <div class="experience-item">
+                <h3>Online Courses & Certifications</h3>
+                <p><strong>Continuous self-training</strong></p>
+                <p class="date">2023 - Present</p>
+                <p>• Certification "Coursera" - google ai</p>
+            </div>
+            
+            <div class="experience-item">
+                <h3>Tech Volunteer Projects</h3>
+                <p><strong>Student Association</strong></p>
+                <p class="date">February 2024 - May 2024</p>
+                <p>•Creating a simple website for a local charity</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Contact</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">📧</div>
+                    <div>
+                        <strong>Email</strong><br>
+                        jnfirst0@gmail.com
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">🔗</div>
+                    <div>
+                        <strong>LinkedIn</strong><br>
+                        www.linkedin.com/in/jn-first-b3a939371
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">💻</div>
+                    <div>
+                        <strong>GitHub</strong><br>
+                        github.com/22308307
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📱</div>
+                    <div>
+                        <strong>phone</strong><br>
+                        +90 533 877 95 83
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Animation simple au scroll
+        const sections = document.querySelectorAll('.section');
+        
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        sections.forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(section);
+        });
+        
+        // Animation des cartes de projets
+        const projectCards = document.querySelectorAll('.project-card');
+        projectCards.forEach((card, index) => {
+            card.addEventListener('mouseenter', () => {
+                card.style.boxShadow = '0 15px 35px rgba(0, 0, 0, 0.2)';
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.boxShadow = 'none';
+            });
+        });
+    </script>
+</body>
+</html>
